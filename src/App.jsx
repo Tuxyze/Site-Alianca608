@@ -212,6 +212,7 @@ function App() {
         {/* CONTEÚDO DINÂMICO */}
         <main className="main-content">
           <Routes>
+            <Route index element={<Home />} />
             <Route path="/" element={<Home />} />
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/historia" element={<Historia />} />
