@@ -1,15 +1,14 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css'; 
 import logoCapitulo from './assets/logo.png';
+import InteresseDemolay from './InteresseDemolay'; 
 
 const Home = () => (
   <div className="home-container">
     <section className="hero">
       <div className="hero-content">
         <img src={logoCapitulo} alt="Brasão Aliança 608" className="hero-logo" />
-        
         <h1>Bem-vindo ao Capítulo Aliança de Suzano nº 608 da Ordem DeMolay</h1>
-        
         <div className="filiacao-badge">
           <div className="badge-icon">🏛️</div>
           <p><strong>Filiado ao GCE-SP:</strong><br/>Grande Conselho Estadual da Ordem DeMolay do Estado de São Paulo</p>
@@ -24,8 +23,7 @@ const Home = () => (
           A Ordem DeMolay é uma irmandade! Queremos transformar jovens em grandes líderes do amanhã. 
           Nossos membros são garotos de 12 a 21 anos que, assim como você, sonham com um mundo melhor.
         </p>
-        {/* Lembra de substituir por um numero real sem traço e nem nada só numeros rs */}
-       <a 
+        <a 
           href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Ordem%20DeMolay%20e%20o%20Capítulo%20Aliança!" 
           target="_blank" 
           rel="noopener noreferrer" 
@@ -34,8 +32,8 @@ const Home = () => (
           💬 Falar com um DeMolay
         </a>
       </div>
-<div className="about-video-placeholder">
 
+      <div className="about-video-placeholder">
         <iframe 
           className="video-iframe"
           width="100%" 
@@ -46,9 +44,7 @@ const Home = () => (
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           allowFullScreen
         ></iframe>
-        <div className="video-box">
-        
-        </div>
+        <div className="video-box"></div>
       </div>
     </section>
 
@@ -80,27 +76,27 @@ const QuemSomos = () => (
     </div>
 
     <div className="team-grid">
-      {/* Exemplo de Card de Membro */}
       <div className="member-card">
         <div className="member-photo placeholder-photo">MC</div>
-        <h3 className="member-name">Vinícius 13</h3>
+        <h3 className="member-name">Vinícius</h3>
         <p className="member-role">Mestre Conselheiro</p>
       </div>
 
       <div className="member-card">
         <div className="member-photo placeholder-photo">1C</div>
-        <h3 className="member-name">Marco(Histórico)</h3>
+        <h3 className="member-name">Marco</h3>
         <p className="member-role">1º Conselheiro</p>
       </div>
 
       <div className="member-card">
         <div className="member-photo placeholder-photo">2C</div>
-        <h3 className="member-name">Gustavinha Bixa</h3>
+        <h3 className="member-name">Gustavo</h3>
         <p className="member-role">2º Conselheiro</p>
       </div>
     </div>
   </div>
 );
+
 const Historia = () => (
   <div className="page-container">
     <div className="page-header">
@@ -111,17 +107,17 @@ const Historia = () => (
     <div className="history-content">
       <div className="history-block">
         <h3>A Fundação</h3>
-        <p>[Aqui nos vamos contar como surgiu a ideia de fundar o Capítulo, quem foram os maçons e jovens da primeira leva, a data oficial da fundação e onde foram as primeiras reuniões xd]</p>
+        <p>[Aqui vamos contar como surgiu a ideia de fundar o Capítulo, quem foram os maçons e jovens da primeira leva, a data oficial da fundação e onde foram as primeiras reuniões]</p>
       </div>
 
       <div className="history-block">
         <h3>A Escolha do Nome</h3>
-        <p>[Espaço para explicar o pq do nome Aliança de Suzano, se tem alguma história especial por trás da escolha e o que ele representa para a região]</p>
+        <p>[Espaço para explicar o porquê do nome Aliança de Suzano, se tem alguma história especial por trás da escolha e o que ele representa para a região]</p>
       </div>
 
       <div className="history-block">
         <h3>Nosso Legado</h3>
-        <p>[Texto sobre as principais conquistas do Capítulo ao longo dos anos, prêmios recebidos, grandes eventos filantrópicos realizados e o impacto na comunidade da região xd]</p>
+        <p>[Texto sobre as principais conquistas do Capítulo ao longo dos anos, prêmios recebidos, grandes eventos filantrópicos realizados e o impacto na comunidade]</p>
       </div>
     </div>
   </div>
@@ -139,27 +135,22 @@ const Galeria = () => (
         <img src="https://via.placeholder.com/400x300/111/e6b800?text=Filantropia" alt="Filantropia" />
         <div className="gallery-caption">Arrastão Solidário</div>
       </div>
-      
       <div className="gallery-item">
         <img src="https://via.placeholder.com/400x300/222/cc0000?text=Cerimônia" alt="Cerimônia Pública" />
         <div className="gallery-caption">Cerimônia de Dia das Mães</div>
       </div>
-      
       <div className="gallery-item">
         <img src="https://via.placeholder.com/400x300/111/e6b800?text=Esportes" alt="Esportes" />
         <div className="gallery-caption">Torneio Estadual Esportivo</div>
       </div>
-      
       <div className="gallery-item">
         <img src="https://via.placeholder.com/400x300/222/cc0000?text=Reunião" alt="Posse" />
         <div className="gallery-caption">Posse da Nova Gestão</div>
       </div>
-      
       <div className="gallery-item">
         <img src="https://via.placeholder.com/400x300/111/e6b800?text=Congresso" alt="Congresso" />
         <div className="gallery-caption">Congresso Regional (CREOD)</div>
       </div>
-      
       <div className="gallery-item">
         <img src="https://via.placeholder.com/400x300/222/cc0000?text=Irmandade" alt="Lazer" />
         <div className="gallery-caption">Dia de Lazer e Integração</div>
@@ -167,6 +158,7 @@ const Galeria = () => (
     </div>
   </div>
 );
+
 const Login = () => (
   <div className="login-wrapper">
     <div className="login-box">
@@ -175,7 +167,6 @@ const Login = () => (
         <p>Acesso exclusivo para membros do Capítulo</p>
       </div>
       
-      {/* O onSubmit evita que a página recarregue ao dar Enter */}
       <form className="login-form" onSubmit={(e) => e.preventDefault()}>
         <div className="input-group">
           <label htmlFor="usuario">ID</label>
@@ -212,18 +203,20 @@ function App() {
               <li><Link to="/quem-somos">Quem Somos</Link></li>
               <li><Link to="/historia">História</Link></li>
               <li><Link to="/galeria">Galeria</Link></li>
+              <li><Link to="/faca-parte">Faça Parte</Link></li>
               <li><Link to="/login" className="login-btn">Login</Link></li>
             </ul>
           </nav>
         </header>
 
-        {/* CONTEÚDO DINÂMICO (As abas) */}
+        {/* CONTEÚDO DINÂMICO */}
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/historia" element={<Historia />} />
             <Route path="/galeria" element={<Galeria />} /> 
+            <Route path="/faca-parte" element={<InteresseDemolay />} />
             <Route path="/login" element={<Login />} />
           </Routes>
         </main>

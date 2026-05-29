@@ -1,0 +1,87 @@
+.formulario-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+.formulario-container h2 {
+  color: #1a365d; /* Um azul escuro imponente */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.formulario-container p {
+  color: #4a5568;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.form-demolay {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-demolay label {
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-demolay input, 
+.form-demolay textarea {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.form-demolay input:focus, 
+.form-demolay textarea:focus {
+  outline: none;
+  border-color: #3182ce; /* Azul de destaque ao clicar */
+}
+
+.row-form {
+  display: flex;
+  gap: 15px;
+}
+
+.col-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-enviar {
+  background-color: #d69e2e; /* Dourado/Amarelo clássico da Ordem */
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.btn-enviar:hover {
+  background-color: #b7791f;
+}
+
+/* Ajuste para telas pequenas (Celular) */
+@media (max-width: 480px) {
+  .row-form {
+    flex-direction: column;
+    gap: 0;
+  }
+}
