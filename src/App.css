@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Reseta margens padrão e define a fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* --- Isso aq ele fixa o footer no fundo XD--- */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.main-content {
+  flex: 1; /* Faz o "miolo" do site esticar e empurrar o rodapé lá pra baixo */
+}
+
+/* --- CABEÇALHO --- */
+.header {
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  max-height: 70px; /* Aqui controla o tamanho da imagem do brasao*/
+  max-width: 100%;
+  width: auto;
+  object-fit: contain; /* Garante que a imagem não fique esticada ou esmagada */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e6b800;
+}
+
+.login-btn {
+  background-color: #cc0000; /* Vermelho que vai usar pra tudo */
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+/* Garante que os links com classe de botao nao fique com aqueles negocio azul */
+a.btn-primary.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* --- BOTÕES MELHORADOS --- */
+.btn-primary {
+  background-color: #cc0000; /* Vermelho padrão */
+  color: white;
+  padding: 15px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px; /* Deixa o botão em formato de pílula arredondada */
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Dá um espacinho entre o ícone e o texto */
+  transition: all 0.3s ease; /* Animação suave */
+  box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3); /* Sombra bonita */
+}
+
+.btn-primary:hover {
+  background-color: #a00000;
+  transform: translateY(-4px); /* Faz o botão "pular" para cima */
+  box-shadow: 0 8px 25px rgba(204, 0, 0, 0.5); /* Aumenta a sombra no hover */
+}
+
+/* Estilo específico para o botão de WhatsApp (Verde) */
+.btn-whatsapp {
+  background-color: #25D366; /* Verde oficial do WhatsApp */
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background-color: #1EBE5D;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* --- HOME E HERO (ESTILO GUERREIROS DA LUZ) --- */
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  /* Fundo escuro elegante */
+  background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom: 5px solid #cc0000;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo {
+  height: 120px; /* Logo grande no centro */
+  margin-bottom: 25px;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Badge de filiação (Aquela caixinha que fala do GCE-SP) */
+.filiacao-badge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 8px;
+  border-left: 4px solid #e6b800; /* Dourado */
+  text-align: left;
+}
+
+.badge-icon {
+  font-size: 30px;
+}
+
+.filiacao-badge p {
+  font-size: 14px;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+/* --- NOVA SEÇÃO: COMO SER UM DEMOLAY --- */
+.about-demolay-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 80px 40px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.about-video-placeholder {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.video-iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: none;
+}
+
+/* Ajuste Responsivo da Nova Seção para Celular */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  .about-demolay-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+}
+
+/* --- CARDS INFORMATIVOS --- */
+.cards-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  background-color: #f4f4f9;
+}
+
+.card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  border-top: 4px solid #111;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #111;
+  font-size: 22px;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* --- PÁGINAS INTERNAS (QUEM SOMOS E HISTÓRIA) --- */
+.page-container {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-header h2 {
+  font-size: 36px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* --- QUEM SOMOS GRID --- */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.member-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.placeholder-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #111;
+  color: #e6b800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+  border: 4px solid #cc0000;
+}
+
+.member-name {
+  font-size: 20px;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.member-role {
+  font-size: 15px;
+  color: #cc0000;
+  font-weight: 600;
+}
+
+/* --- LOGIN FINO DO FINO --- */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px); /* Altura da tela menos o header e footer */
+  background: linear-gradient(135deg, #f4f4f9 0%, #e0e0e0 100%);
+  padding: 20px;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  border-top: 5px solid #cc0000; 
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h2 {
+  color: #111;
+  font-size: 28px;
+}
+
+.login-header p {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.input-group input {
+  padding: 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #e6b800; /* Dourado ao clicar no campo */
+  outline: none;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  color: #cc0000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+  color: #111;
+}
+
+.btn-entrar {
+  width: 100%;
+  padding: 14px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-entrar:hover {
+  background-color: #e6b800; /* Fica dourado ao passar o mouse */
+  color: #111;
+  transform: translateY(-2px); /* Efeito sutil de levantar o botãozinho */
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 350px;
+  margin-top: 20px;
+}
+
+.login-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-box button {
+  padding: 10px;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-box button:hover {
+  background-color: #e6b800;
+  color: #111;
+}
+
+/* --- RODAPÉPÉ --- */
+.footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* --- PÁGINA DE HISTÓRIAAAAAAA --- */
+.history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza os blocos na tela */
+}
+
+.history-block {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-left: 6px solid #cc0000; /* Detalhe vermelho na esquerda */
+  transition: transform 0.3s ease;
+}
+
+.history-block:hover {
+  transform: translateX(10px); /* Dá um efeitinho de deslizar pro lado ao passar o mouse */
+}
+
+.history-block h3 {
+  color: #111;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.history-block p {
+  color: #555;
+  line-height: 1.8; /* Aumenta o espaço entre as linhas para facilitar a leitura */
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* --- PÁGINA DE GALERIA --- */
+.gallery-grid {
+  display: grid;
+  /* Cria uma grade responsiva automática (não precisa nem de media query!) */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden; /* Esconde o texto que está "fora" da foto */
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-bottom: 4px solid #cc0000;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03); /* Dá um zoom leve na foto inteira */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(17, 17, 17, 0.9);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  transform: translateY(100%); /* Joga o texto para baixo, escondendo-o */
+  transition: transform 0.3s ease;
+}
+
+/* Quando passa o mouse no card, o texto volta para a posição original (0) */
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+}
+
+/* --- RESPONSIVIDADE TOTAL (Biriris e Tablets menores que 768px) obs:odiei fazer essa parte --- */
+@media (max-width: 768px) {
+  /* 1. Cabeçalho e Menu */
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .login-btn {
+    width: 100%; /* Faz o botão de login ocupar a linha toda no celular */
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  /* 2. Home e Hero */
+  .hero {
+    padding: 40px 15px;
+  }
+  
+  .hero-logo {
+    height: 90px; /* Diminui a logo no celular pra não dar uma de guloso e engolir a tela */
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .filiacao-badge {
+    flex-direction: column; /* Empilha o ícone e o texto do badge */
+    text-align: center;
+    gap: 10px;
+  }
+
+  /* 3. Seção do Vídeo (Como Ser DeMolay) */
+  .about-demolay-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .about-text h2 {
+    font-size: 28px;
+  }
+  
+  .video-iframe {
+    height: 220px; /* Reduz a altura do vídeo para não cortar no celular */
+  }
+
+  /* 4. Grades (Cards da Home e Quem Somos) */
+  .cards-section, .team-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15px;
+  }
+  
+  .card, .member-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* 5. Página de História */
+  .page-container {
+    padding: 40px 15px;
+  }
+  
+  .page-header h2 {
+    font-size: 28px;
+  }
+  
+  .history-block {
+    padding: 20px; /* Diminui a gordura interna dos blocos de texto pique kilos mortais */
+  }
+
+  /* 6. Página de Login */
+  .login-box {
+    padding: 25px 20px;
+  }
+  
+  .login-header h2 {
+    font-size: 24px;
+  }
+
+  /* 7. Rodapé */
+  .footer {
+    font-size: 12px;
+    padding: 15px;
+    line-height: 1.5;
+  }
+}
