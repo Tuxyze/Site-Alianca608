@@ -4,10 +4,8 @@ import logoCapitulo from './assets/logo.png';
 
 const Home = () => (
   <div className="home-container">
-    {/* NOVA ÁREA DE DESTAQUE (HERO) INSPIRADA NO GUERREIROS DA LUZ */}
     <section className="hero">
       <div className="hero-content">
-        {/* Usando a mesma imagem da logo aqui no meio também! */}
         <img src={logoCapitulo} alt="Brasão Aliança 608" className="hero-logo" />
         
         <h1>Bem-vindo ao Capítulo Aliança de Suzano nº 608 da Ordem DeMolay</h1>
@@ -19,7 +17,6 @@ const Home = () => (
       </div>
     </section>
     
-    {/* Nova Seção: "Junte-se a nós / Como ser um DeMolay" parecida com o site referência */}
     <section className="about-demolay-section">
       <div className="about-text">
         <h2>Como ser um DeMolay</h2>
@@ -55,9 +52,7 @@ const Home = () => (
       </div>
     </section>
 
-    {/* Mantemos os cards para ações rápidas */}
     <section className="cards-section">
-      {/* ... (pode manter os 3 cards que já tínhamos aqui: Nossos Trabalhos, Ingressar, Contato) ... */}
       <div className="card">
         <div className="card-icon">🤝</div>
         <h3>Nossos Trabalhos</h3>
@@ -140,7 +135,6 @@ const Galeria = () => (
     </div>
     
     <div className="gallery-grid">
-      {/* Cards de Imagem (Estamos usando imagens genéricas por enquanto) */}
       <div className="gallery-item">
         <img src="https://via.placeholder.com/400x300/111/e6b800?text=Filantropia" alt="Filantropia" />
         <div className="gallery-caption">Arrastão Solidário</div>
